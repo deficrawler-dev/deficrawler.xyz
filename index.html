@@ -1,4 +1,5 @@
 <!-- ============== Defi Crawler — Archaic Portfolio (clip + old wall bg + modal clip) ============== -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cinzel+Decorative:wght@700&family=Source+Code+Pro:wght@500;700&display=swap" rel="stylesheet" />
 
 <div id="dc-root">
@@ -340,22 +341,31 @@
 
   /* ========== MOBILE ========== */
   @media (max-width:640px){
-    #dc-root .dc-paper{ margin:16px 8px; padding:24px 16px 28px; }
-    #dc-root .dc-title{ font-size:clamp(36px,10vw,52px); }
-    #dc-root .dc-h2{ font-size:clamp(24px,6vw,32px); }
-    #dc-root .dc-lede{ font-size:17px; }
-    #dc-root .dc-list li{ font-size:16px; margin:7px 0; }
-    #dc-root .dc-nav{ gap:6px 10px; font-size:15px; }
-    #dc-root .dc-section{ margin:28px 0; }
-    #dc-root .dc-venda-card{ grid-template-columns:1fr; }
-    #dc-root .dc-venda-lede{ font-size:16px; }
+    #dc-root .dc-paper{ margin:0; padding:28px 18px 36px; border-left:none; border-right:none; border-radius:0; }
+    #dc-root .dc-title{ font-size: clamp(32px, 9vw, 48px); }
+    #dc-root .dc-sub{ font-size:15px; }
+    #dc-root .dc-h2{ font-size: clamp(22px, 6.5vw, 30px); }
+    #dc-root .dc-lede{ font-size:16px; line-height:1.6; }
+    #dc-root .dc-list{ margin-left:16px; }
+    #dc-root .dc-list li{ font-size:15px; margin:8px 0; }
+    #dc-root .dc-nav{ gap:6px 12px; font-size:15px; }
+    #dc-root .dc-section{ margin:30px 0; }
+    #dc-root .dc-venda-section{ padding:18px 14px 20px; }
+    #dc-root .dc-venda-card{ grid-template-columns:1fr; gap:14px; }
+    #dc-root .dc-venda-lede{ font-size:15px; }
     #dc-root .dc-venda-list li{ font-size:15px; }
+    #dc-root .dc-venda-img{ min-height:200px; object-fit:cover; }
     #dc-root .dc-venda-cta{ width:100%; text-align:center; display:block; }
     #dc-root .dc-row{ grid-template-columns:1fr; gap:6px; }
-    #dc-root .dc-copy{ width:100%; }
-    #dc-root .dc-card img{ height:160px; }
-    #dc-root .dc-modal-card{ margin:4vh 8px; padding:16px 12px; }
-    #dc-root .dc-cta{ display:block; text-align:center; padding:13px 16px; font-size:16px; }
+    #dc-root .dc-code{ font-size:12px; white-space:pre-wrap; word-break:break-all; }
+    #dc-root .dc-copy{ width:100%; padding:10px; font-size:15px; }
+    #dc-root .dc-card img{ height:180px; }
+    #dc-root .dc-card-title{ font-size:15px; }
+    #dc-root .dc-modal-card{ margin:4vh 10px; padding:20px 14px; }
+    #dc-root .dc-cta{ display:block; text-align:center; padding:14px 18px; font-size:17px; }
+    #dc-root .dc-drawer-panel{ width:100vw; }
+    #dc-root .dc-grid{ grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap:10px; }
+    .dc-crest{ width:36px; height:36px; }
   }
 </style>
 
