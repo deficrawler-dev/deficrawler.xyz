@@ -69,7 +69,7 @@
       <div class="dc-venda-eyebrow">★ Major Project</div>
       <h2 class="dc-h2 dc-venda-title">Venda</h2>
       <p class="dc-lede dc-venda-lede">
-        My most ambitious build to date. Venda lets small business owners build a free website or online store — no developer, no hosting fees, no domain costs. Just sign up and start selling.
+        A product I'm building for small business owners who actually need it — launched and still shipping. Venda lets them build a free website or online store — no developer, no hosting fees, no domain costs. Just sign up and start selling.
       </p>
       <div class="dc-venda-card">
         <div class="dc-venda-img-wrap">
@@ -448,6 +448,8 @@ function dcOpenDrawer(){
   if(!dcOpenDrawer._rendered){ renderDrawerProjects(); dcOpenDrawer._rendered=true; }
 }
 function dcCloseDrawer(e){
+  // Don't close if clicking a card link or its children
+  if(e && e.target.closest('.dc-card')) return;
   if(!e || e.target.hasAttribute('data-close') || e.target.classList.contains('dc-x')){
     const d=document.getElementById('dc-work-drawer'); d.classList.remove('active'); d.setAttribute('aria-hidden','true');
   }
