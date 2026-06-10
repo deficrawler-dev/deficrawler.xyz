@@ -1,0 +1,483 @@
+<!-- ============== Defi Crawler — Archaic Portfolio (clip + old wall bg + modal clip) ============== -->
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cinzel+Decorative:wght@700&family=Source+Code+Pro:wght@500;700&display=swap" rel="stylesheet" />
+
+<div id="dc-root">
+  <div class="dc-paper">
+    <!-- Binder clip on paper -->
+    <div class="dc-clip" aria-hidden="true">
+      <svg viewBox="0 0 80 70" class="dc-clip-svg">
+        <path d="M18 26 C18 9, 62 9, 62 26" class="clip-wire"/>
+        <path d="M26 26 C26 14, 54 14, 54 26" class="clip-wire"/>
+        <rect x="18" y="26" width="44" height="28" rx="4" class="clip-body"/>
+        <path d="M18 30 L62 30" class="clip-seam"/>
+      </svg>
+    </div>
+
+    <header class="dc-header">
+      <!-- SPIDER CREST -->
+      <div class="dc-crest" aria-hidden="true">
+        <svg viewBox="0 0 48 48" class="dc-crest-spider">
+          <ellipse cx="24" cy="28" rx="8.5" ry="9.5" />
+          <circle cx="24" cy="18" r="5.5" />
+          <circle cx="22" cy="17.2" r="1.2" class="eye"/>
+          <circle cx="26" cy="17.2" r="1.2" class="eye"/>
+          <g class="legs">
+            <path d="M17 23 L6 18" />
+            <path d="M17 27 L5 27" />
+            <path d="M17 31 L7 35" />
+            <path d="M31 23 L42 18" />
+            <path d="M31 27 L43 27" />
+            <path d="M31 31 L41 35" />
+          </g>
+        </svg>
+      </div>
+
+      <h1 class="dc-title">Defi Crawler</h1>
+      <p class="dc-sub">Ready to launch that project — Let's ship it.</p>
+
+      <nav class="dc-nav">
+        <a href="#about">About</a>
+        <span>·</span>
+        <a href="#venda" id="dc-venda-scroll">Flagship</a>
+        <span>·</span>
+        <a href="#work" id="dc-work-open-nav">Work</a>
+        <span>·</span>
+        <a href="#tips" id="dc-tip-open">Send crypto tip</a>
+        <span>·</span>
+        <a href="https://x.com/DefiCrawler" target="_blank" rel="noopener noreferrer">X</a>
+      </nav>
+    </header>
+
+    <section id="about" class="dc-section">
+      <h2 class="dc-h2">About</h2>
+      <p class="dc-lede">
+        I design fast, conversion-ready websites for crypto teams and communities.
+        Clean code. Clear messaging. Ship quickly—without breaking trust.
+      </p>
+      <ul class="dc-list">
+        <li>Landing pages for token launches &amp; mints</li>
+        <li>Docs &amp; litepapers with elegant typography</li>
+        <li>Analytics embeds, partner sections, and KOL pages</li>
+        <li>SEO/OG optimization and snappy performance</li>
+      </ul>
+      <a href="#work" class="dc-cta" id="dc-work-open" role="button">View my work</a>
+    </section>
+
+    <!-- ===== VENDA FLAGSHIP SECTION ===== -->
+    <section id="venda" class="dc-section dc-venda-section">
+      <div class="dc-venda-eyebrow">★ Major Project</div>
+      <h2 class="dc-h2 dc-venda-title">Venda</h2>
+      <p class="dc-lede dc-venda-lede">
+        My most ambitious build to date. Venda is a full-stack commerce platform for the crypto-native creator economy — bringing storefront, payments, and community tooling into one cohesive experience.
+      </p>
+      <div class="dc-venda-card">
+        <div class="dc-venda-img-wrap">
+          <img src="https://raw.githubusercontent.com/DefiCrawler/portfolio-thumbs/main/Venda%20app.PNG"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+               alt="Venda App screenshot" class="dc-venda-img" />
+          <div class="dc-venda-img-fallback" style="display:none;">
+            <span>Venda App</span>
+          </div>
+        </div>
+        <div class="dc-venda-body">
+          <ul class="dc-list dc-venda-list">
+            <li>Full storefront &amp; product management</li>
+            <li>Crypto-native checkout &amp; wallet integration</li>
+            <li>Creator community &amp; KOL tooling</li>
+            <li>Responsive, performance-first build</li>
+          </ul>
+          <a href="https://usevenda.app" target="_blank" rel="noopener noreferrer" class="dc-cta dc-venda-cta">
+            Visit usevenda.app ↗
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- ===== /VENDA ===== -->
+
+    <section id="tips" class="dc-section">
+      <h2 class="dc-h2">Send Me a Crypto Tip</h2>
+      <p class="dc-lede">If my work helped you ship or scale, you can say thanks with a tip. Much appreciated. ⚑</p>
+      <button class="dc-cta" id="dc-tip-open-2" type="button">Copy Tip Wallets</button>
+    </section>
+
+    <footer class="dc-footer">
+      <div class="dc-rule" aria-hidden="true"></div>
+      <p>© <span id="dc-year"></span> Defi Crawler. Not a Financial Advice.</p>
+    </footer>
+  </div>
+
+  <!-- Tip Modal -->
+  <div class="dc-modal" id="dc-tip-modal" aria-hidden="true" role="dialog" aria-label="Crypto tip addresses">
+    <div class="dc-modal-backdrop" data-close></div>
+    <div class="dc-modal-card" role="document" aria-modal="true" tabindex="-1">
+      <!-- Binder clip on modal -->
+      <div class="dc-clip dc-clip--modal" aria-hidden="true">
+        <svg viewBox="0 0 80 70" class="dc-clip-svg">
+          <path d="M18 26 C18 9, 62 9, 62 26" class="clip-wire"/>
+          <path d="M26 26 C26 14, 54 14, 54 26" class="clip-wire"/>
+          <rect x="18" y="26" width="44" height="28" rx="4" class="clip-body"/>
+          <path d="M18 30 L62 30" class="clip-seam"/>
+        </svg>
+      </div>
+
+      <button class="dc-x" title="Close" aria-label="Close" data-close>×</button>
+      <h3 class="dc-h3">Crypto Tip Addresses</h3>
+      <p class="dc-note">Click <em>Copy</em> beside any address. You can edit these in <em>DC_WALLETS</em> inside the script.</p>
+      <ul id="dc-wallet-list" class="dc-wallets"></ul>
+      <div class="dc-modal-actions">
+        <button class="dc-ghost" data-close>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sliding drawer for Work -->
+  <div class="dc-drawer" id="dc-work-drawer" aria-hidden="true" role="dialog" aria-label="Selected Work">
+    <div class="dc-drawer-backdrop" data-close></div>
+    <div class="dc-drawer-panel" role="document" aria-modal="true" tabindex="-1">
+      <div class="dc-drawer-head">
+        <strong>Selected Work</strong>
+        <button class="dc-x" data-close aria-label="Close">×</button>
+      </div>
+      <div class="dc-drawer-body">
+        <p class="dc-note">Tap a card to open the live site.</p>
+        <div id="dc-projects-drawer" class="dc-grid"></div>
+        <p class="dc-note" style="margin-top:10px;font-weight:700;">Yoh dawg! still not satisfied? More can be provided upon request.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* ========== Global / Old wall background (subtle) ========== */
+  #dc-root{
+    background-color:#f2eee6;
+    background-image:
+      radial-gradient(1200px 700px at 20% 0%, rgba(0,0,0,.05) 0, rgba(0,0,0,0) 60%),
+      radial-gradient(900px 500px at 85% 5%, rgba(0,0,0,.045) 0, rgba(0,0,0,0) 58%),
+      repeating-linear-gradient(0deg, rgba(0,0,0,.015) 0 1px, transparent 1px 6px),
+      repeating-linear-gradient(90deg, rgba(0,0,0,.012) 0 1px, transparent 1px 7px);
+    background-blend-mode: multiply, multiply, normal, normal;
+  }
+
+  /* -------- Paper -------- */
+  #dc-root { --ink:#2a2a2a; --ink2:#574b3a; --paper:#f7f2e6; --edge:#d7cdb7; --accent:#8a6a33; --accent2:#b08a45; --link:#5a3e16; --cta:#3b2a12; --cta-ink:#f5efe1; --shadow:rgba(0,0,0,.15); }
+  #dc-root * { box-sizing: border-box; }
+  #dc-root { font-family: "IM Fell English", Georgia, "Times New Roman", serif; color: var(--ink); }
+
+  #dc-root .dc-paper{
+    position:relative; max-width:980px; margin:40px auto; padding:28px 22px 34px; background:var(--paper);
+    border:2px solid var(--edge); box-shadow:0 20px 40px var(--shadow);
+    background-image:
+      radial-gradient(1200px 600px at 10% -10%, rgba(0,0,0,.07) 0, transparent 60%),
+      radial-gradient(800px 400px at 110% 0%, rgba(0,0,0,.05) 0, transparent 55%),
+      radial-gradient(900px 500px at 50% 100%, rgba(0,0,0,.06) 0, transparent 60%),
+      repeating-linear-gradient(0deg, rgba(0,0,0,.02) 0 2px, transparent 2px 6px);
+  }
+  /* Deckled edges */
+  #dc-root .dc-paper:before, #dc-root .dc-paper:after{
+    content:""; position:absolute; left:10px; right:10px; height:10px;
+    background: repeating-linear-gradient(90deg, transparent 0 8px, rgba(0,0,0,.05) 8px 9px);
+  }
+  #dc-root .dc-paper:before{ top:-7px; filter: blur(0.3px); }
+  #dc-root .dc-paper:after{ bottom:-7px; filter: blur(0.3px); }
+
+  /* ========== Binder Clip ========== */
+  .dc-clip{
+    position:absolute; left:50%; top:-30px; transform:translateX(-50%);
+    width:64px; height:54px; z-index:5; pointer-events:none;
+    filter: drop-shadow(0 5px 4px rgba(0,0,0,.25));
+  }
+  .dc-clip--modal{ top:-26px; width:56px; height:46px; z-index:100001; }
+  .dc-clip-svg{ width:100%; height:100%; }
+  .dc-clip-svg .clip-body{ fill:#2b2419; stroke:#000; stroke-width:1.5; }
+  .dc-clip-svg .clip-wire{ fill:none; stroke:#3a2e1f; stroke-width:3; stroke-linecap:round; }
+  .dc-clip-svg .clip-seam{ stroke:#000; stroke-width:1.2; opacity:.5; }
+
+  /* -------- Header -------- */
+  #dc-root .dc-header{ text-align:center; margin-bottom:18px; }
+  .dc-crest{ margin: 6px auto 4px; width: 28px; height: 28px; display:grid; place-items:center; }
+  .dc-crest-spider{ width:100%; height:100%; fill:var(--link); stroke:var(--link); stroke-width:2; }
+  .dc-crest-spider .eye{ fill:#000; stroke:none; }
+  .dc-crest-spider .legs{ fill:none; stroke:var(--link); stroke-width:2; stroke-linecap:round; }
+
+  #dc-root .dc-title{
+    font-family:"Cinzel Decorative", serif; letter-spacing:0.04em; font-size: clamp(34px, 6vw, 58px);
+    margin:2px 0 2px; color:var(--link); text-shadow:0 1px 0 #fff;
+  }
+  #dc-root .dc-sub{ margin:4px 0 10px; font-style:italic; color:var(--ink2); }
+  #dc-root .dc-nav{ display:flex; gap:8px; justify-content:center; align-items:center; flex-wrap:wrap; }
+  #dc-root .dc-nav a{ color:var(--link); text-decoration:none; padding:2px 6px; border-bottom:1px dashed var(--accent2); }
+  #dc-root .dc-nav a:hover{ background: rgba(176,138,69,.08); }
+
+  /* -------- Sections -------- */
+  #dc-root .dc-section{ margin:22px 0; }
+  #dc-root .dc-h2{ font-family:"Cinzel Decorative", serif; margin:0 0 6px; font-size:clamp(22px, 3.2vw, 30px); color:var(--accent); letter-spacing:.02em; }
+  #dc-root .dc-lede{ font-size:18px; line-height:1.5; margin:8px 0 14px; }
+  #dc-root .dc-list{ margin:0 0 14px 18px; }
+  #dc-root .dc-list li{ margin:4px 0; }
+  #dc-root .dc-note{ font-size:14px; color:#6b5a43; }
+
+  /* -------- Venda Flagship Section -------- */
+  #dc-root .dc-venda-section{
+    border:2px solid var(--accent2);
+    background: linear-gradient(160deg, #fdf6e4 0%, #f5ead0 100%);
+    padding:20px 18px 22px;
+    position:relative;
+    box-shadow: 0 4px 18px rgba(138,106,51,.14), inset 0 0 40px rgba(176,138,69,.04);
+  }
+  #dc-root .dc-venda-section::before{
+    content:"";
+    position:absolute; inset:0;
+    background: repeating-linear-gradient(45deg, rgba(176,138,69,.03) 0 2px, transparent 2px 14px);
+    pointer-events:none;
+  }
+  #dc-root .dc-venda-eyebrow{
+    font-family:"Cinzel Decorative", serif;
+    font-size:11px; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--accent2); margin-bottom:4px;
+  }
+  #dc-root .dc-venda-title{
+    font-size: clamp(28px, 4.5vw, 42px);
+    color:var(--link);
+    margin:0 0 2px;
+    text-shadow: 0 2px 0 rgba(255,255,255,.7);
+  }
+  #dc-root .dc-venda-lede{ font-size:17px; }
+  #dc-root .dc-venda-card{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:18px;
+    margin-top:14px;
+    align-items:start;
+  }
+  #dc-root .dc-venda-img-wrap{
+    border:2px solid var(--edge);
+    overflow:hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,.12);
+  }
+  #dc-root .dc-venda-img{
+    width:100%; display:block;
+    filter: sepia(8%) contrast(1.06) saturate(0.92);
+    transition: transform .3s ease;
+  }
+  #dc-root .dc-venda-img:hover{ transform: scale(1.02); }
+  #dc-root .dc-venda-img-fallback{
+    width:100%; height:200px;
+    background: linear-gradient(135deg, #2a1d08, #5a3e16);
+    display:flex; align-items:center; justify-content:center;
+    color:#f5efe1; font-family:"Cinzel Decorative", serif; font-size:22px;
+  }
+  #dc-root .dc-venda-body{ display:flex; flex-direction:column; justify-content:center; }
+  #dc-root .dc-venda-list{ margin-bottom:18px; }
+  #dc-root .dc-venda-list li{ margin:6px 0; font-size:16px; }
+  #dc-root .dc-venda-cta{
+    background: linear-gradient(180deg, #5a3e16 0%, #1a0f04 100%);
+    font-size:16px; padding:12px 18px;
+    display:inline-block;
+  }
+
+  /* -------- CTA + Buttons -------- */
+  #dc-root .dc-cta{
+    display:inline-block; background: linear-gradient(180deg, var(--cta) 0%, #000 100%); color: var(--cta-ink);
+    padding:10px 14px; border:1px solid #000; border-radius:6px; box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 2px 0 rgba(0,0,0,.25);
+    text-decoration:none; font-weight:700; letter-spacing:.02em; cursor:pointer;
+  }
+  #dc-root .dc-cta:hover{ transform: translateY(-1px); }
+
+  #dc-root .dc-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:14px; margin-top:12px; }
+  #dc-root .dc-card{ position:relative; display:block; text-decoration:none; color:inherit; border:1.5px solid var(--edge); background:#f9f5ea; box-shadow:0 10px 20px rgba(0,0,0,.06); }
+  #dc-root .dc-card img{ width:100%; height:180px; object-fit:cover; display:block; filter: sepia(12%) contrast(1.05) saturate(0.9); }
+  #dc-root .dc-card-title{ padding:10px 10px 12px; font-weight:700; letter-spacing:.02em; border-top:1px solid var(--edge); background: linear-gradient(180deg, rgba(255,255,255,.5), transparent); }
+  #dc-root .dc-card:after{ content:"View Site"; position:absolute; right:8px; bottom:12px; font-size:12px; opacity:.0; background: rgba(0,0,0,.06); padding:2px 6px; border:1px solid rgba(0,0,0,.2); }
+  #dc-root .dc-card:hover:after{ opacity:.75; }
+
+  /* NEW badge on cards */
+  #dc-root .dc-card.dc-card--new::before{
+    content:"New";
+    position:absolute; top:8px; left:8px; z-index:2;
+    background:var(--cta); color:var(--cta-ink);
+    font-size:11px; font-weight:700; letter-spacing:.08em;
+    padding:2px 7px; border:1px solid rgba(255,255,255,.2);
+    font-family:"Source Code Pro", monospace;
+  }
+
+  /* Modal */
+  #dc-root .dc-modal{ position:fixed; inset:0; display:none; z-index:100000; }
+  #dc-root .dc-modal.active{ display:block; }
+  #dc-root .dc-modal-backdrop{ position:absolute; inset:0; background: rgba(0,0,0,.45); }
+  #dc-root .dc-modal-card{
+    position: relative; max-width: 720px; margin: 7vh auto; background: var(--paper);
+    border: 2px solid var(--edge); box-shadow: 0 30px 60px rgba(0,0,0,.35); padding: 18px 16px 16px;
+  }
+  #dc-root .dc-x{
+    position:absolute; right:8px; top:6px; border:0; background:transparent; font-size:24px; line-height:1; cursor:pointer; color:#333;
+  }
+  #dc-root .dc-wallets{ list-style:none; padding:0; margin: 10px 0 8px; display:grid; gap:10px; }
+  #dc-root .dc-row{ display:grid; grid-template-columns: 140px 1fr auto; gap:10px; align-items:center; padding:8px; border:1px dashed var(--edge); background:#fbf8ef; }
+  #dc-root .dc-label{ font-weight:700; color:var(--accent); }
+  #dc-root .dc-code{ font-family:"Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:13px; white-space:nowrap; overflow-x:auto; padding:6px 8px; background:#fff; border:1px solid #e9dfc6; }
+  #dc-root .dc-copy{ padding:8px 10px; border:1px solid #000; background:#1d1408; color:#f5efe1; border-radius:4px; cursor:pointer; min-width:82px; }
+  #dc-root .dc-copy.ok{ background:#2d6a2f; }
+  #dc-root .dc-modal-actions{ display:flex; justify-content:flex-end; gap:8px; margin-top: 12px; }
+  #dc-root .dc-ghost{
+    padding:8px 10px; border:1px solid var(--edge); background:#fff9ee; cursor:pointer;
+    color:#1c1407;
+  }
+
+  /* Drawer */
+  #dc-root .dc-drawer{ position:fixed; inset:0; z-index:99999; display:none; }
+  #dc-root .dc-drawer.active{ display:block; }
+  #dc-root .dc-drawer-backdrop{ position:absolute; inset:0; background: rgba(0,0,0,.45); }
+  #dc-root .dc-drawer-panel{ position:absolute; left:50%; bottom:0; transform: translate(-50%, 100%); width:min(980px, 96vw); background:var(--paper); border:2px solid var(--edge); box-shadow:0 -20px 50px rgba(0,0,0,.35); transition: transform .38s ease-out; max-height:88vh; display:flex; flex-direction:column; }
+  #dc-root .dc-drawer.active .dc-drawer-panel{ transform: translate(-50%, 0%); }
+  #dc-root .dc-drawer-head{ display:flex; align-items:center; justify-content:space-between; padding:12px 14px; border-bottom:1px solid var(--edge); font-family:"Cinzel Decorative", serif; color:var(--accent); }
+  #dc-root .dc-drawer-body{ padding:12px; overflow:auto; }
+  #dc-root .dc-drawer .dc-x{ position:static; font-size:22px; border:0; background:transparent; cursor:pointer; color:#333; }
+
+  /* Footer */
+  #dc-root .dc-footer{ text-align:center; margin-top:26px; font-size:14px; color:#6b5a43; }
+  #dc-root .dc-rule{ height:1px; background: repeating-linear-gradient(90deg, #bfa676 0 8px, transparent 8px 12px); margin:10px 0 8px; }
+
+  /* Responsive */
+  @media (max-width:640px){
+    #dc-root .dc-venda-card{ grid-template-columns:1fr; }
+    #dc-root .dc-row{ grid-template-columns:110px 1fr auto; }
+    #dc-root .dc-card img{ height:160px; }
+  }
+</style>
+
+<!-- React (for the portfolio grid) -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+<script>
+/* wallets */
+window.DC_WALLETS = [
+  { chain: "Solana",           ticker:"SOL",   addr: "P42Sk3dv2krLEqKpM2Z3dev852guuwPYsx6WqJnchS7" },
+  { chain: "Bitcoin",          ticker:"BTC",   addr: "1FF3tPDuouTMXkG7rMvrC1FgjoSsR5tWML" },
+  { chain: "BNB",              ticker:"BNB",   addr: "0x3a5efb6be9ecd3a66adc427a99ca349278091209" },
+  { chain: "Dogecoin",         ticker:"DOGE",  addr: "DAfNtLJCquKP5kZWpPjC1qxwKRQqX5rtBu" },
+  { chain: "Ethereum",         ticker:"ETH",   addr: "0x3a5efb6be9ecd3a66adc427a99ca349278091209" },
+  { chain: "Tether (TRC20)",   ticker:"USDT",  addr: "TUzpLT9jxpJjGyzmsiw2YMk9S8HComKFHX" }
+];
+
+/*
+  THUMBNAIL NOTE: thumbnails below use a GitHub raw URL pattern.
+  Replace "YOUR_GITHUB_USERNAME/YOUR_REPO" with your actual repo path,
+  e.g. "DefiCrawler/portfolio-thumbs"
+  The filenames match exactly what you uploaded to GitHub.
+*/
+var GITHUB_RAW = "https://raw.githubusercontent.com/deficrawler-dev/deficrawler.xyz";
+
+window.DC_PROJECTS = [
+  /* ===== NEW PROJECTS (at the top, badged "New") ===== */
+  { title: "Venda App",         thumb: GITHUB_RAW + "Venda%20app.PNG",       link: "https://usevenda.app/",    isNew: true, isFlagship: true },
+  { title: "BagsLife",          thumb: GITHUB_RAW + "bagslife.PNG",           link: "https://bagslife.fun/",    isNew: true },
+  { title: "Mystic Income",     thumb: GITHUB_RAW + "mystic%20web.PNG",       link: "https://mystincome.fun/",  isNew: true },
+  { title: "All In Blank",      thumb: GITHUB_RAW + "All%20in%201.PNG",       link: "https://allinblnk.xyz/",   isNew: true },
+  { title: "PempSol",           thumb: GITHUB_RAW + "pempsol.PNG",            link: "https://pempsol.fun/",     isNew: true },
+  { title: "RastaLand",         thumb: GITHUB_RAW + "Rasta%20web.PNG",        link: "https://rastaland.tv/",    isNew: true },
+  { title: "WinForever",        thumb: GITHUB_RAW + "winforever%20web.PNG",   link: "https://winforever.fun/",  isNew: true },
+  { title: "3 Jupiter",         thumb: GITHUB_RAW + "3%20jupiter%20web.PNG",  link: "https://3jupiter.xyz/",    isNew: true },
+  { title: "Zolana",            thumb: GITHUB_RAW + "zolana%20web.PNG",       link: "https://zolana.fun/",      isNew: true },
+
+  /* ===== EXISTING PROJECTS ===== */
+  { title: "Sobgarry (Sobcoin)", thumb: "https://deficrawler.xyz/wp-content/uploads/2025/09/Sobcoin.png",        link: "https://sobgarry.xyz/" },
+  { title: "Eagle Solana",       thumb: "https://deficrawler.xyz/wp-content/uploads/2025/09/Bonk-Eagle.png",      link: "https://eaglesolana.io/" },
+  { title: "MarsBags",           thumb: "https://deficrawler.xyz/wp-content/uploads/2025/09/Occupy-1.png",        link: "https://marsbags.fun/" },
+  { title: "Hololux Tech",       thumb: "https://deficrawler.xyz/wp-content/uploads/2025/09/Hololux-tech.png",    link: "https://hololux.tech/" },
+  { title: "Progresh Tech",      thumb: "https://deficrawler.xyz/wp-content/uploads/2025/08/progresh.png",        link: "https://progresh.tech/" },
+  { title: "BlackholeX",         thumb: "https://deficrawler.xyz/wp-content/uploads/2025/08/blackhole.png",       link: "https://blackholex.xyz/" },
+  { title: "SafeMoon Space",     thumb: "https://deficrawler.xyz/wp-content/uploads/2025/08/safemoon.png",        link: "https://deficrawler.xyz/safemoon-2/" },
+  { title: "Lion Society",       thumb: "https://deficrawler.xyz/wp-content/uploads/2025/08/Lion-society.png",    link: "https://deficrawler.xyz/lion-society/" },
+  { title: "CatWifBag",          thumb: "https://deficrawler.xyz/wp-content/uploads/2025/08/Catwifbag.png",       link: "https://catwifbag.fun/" },
+  { title: "Sailana Inu",        thumb: "https://deficrawler.xyz/wp-content/uploads/2025/08/Sailana-inu.png",     link: "https://sailanainu.fun/" },
+  { title: "Heaven",             thumb: "https://deficrawler.xyz/wp-content/uploads/2025/08/Heaven.png",          link: "https://deficrawler.xyz/heaven" },
+  { title: "BagStock Exchange",  thumb: "https://deficrawler.xyz/wp-content/uploads/2025/08/SP-500.png",          link: "https://bagstockexchange.fun/" }
+];
+
+/* copy util */
+async function dcCopy(text){
+  try{
+    if(navigator.clipboard && window.isSecureContext){ await navigator.clipboard.writeText(text); return true; }
+    const ta=document.createElement("textarea"); ta.value=text; ta.style.position="fixed"; ta.style.opacity="0";
+    document.body.appendChild(ta); ta.select(); const ok=document.execCommand("copy"); document.body.removeChild(ta); return ok;
+  }catch(e){ return false; }
+}
+
+/* wallets modal render */
+function renderWallets(){
+  const ul=document.getElementById('dc-wallet-list'); ul.innerHTML="";
+  (window.DC_WALLETS||[]).forEach(w=>{
+    const li=document.createElement('li'); li.className='dc-row';
+    const label=document.createElement('div'); label.className='dc-label'; label.textContent=`${w.chain} (${w.ticker})`;
+    const code=document.createElement('div'); code.className='dc-code'; code.textContent=w.addr;
+    const btn=document.createElement('button'); btn.className='dc-copy'; btn.textContent='Copy';
+    btn.addEventListener('click', async()=>{ const ok=await dcCopy(w.addr); btn.textContent=ok?'Copied!':'Failed'; btn.classList.toggle('ok', ok); setTimeout(()=>{ btn.textContent='Copy'; btn.classList.remove('ok'); },1500); });
+    li.appendChild(label); li.appendChild(code); li.appendChild(btn); ul.appendChild(li);
+  });
+}
+
+/* drawer open/close */
+function dcOpenDrawer(){
+  const d=document.getElementById('dc-work-drawer');
+  d.classList.add('active'); d.setAttribute('aria-hidden','false');
+  if(!dcOpenDrawer._rendered){ renderDrawerProjects(); dcOpenDrawer._rendered=true; }
+}
+function dcCloseDrawer(e){
+  if(!e || e.target.hasAttribute('data-close') || e.target.classList.contains('dc-x')){
+    const d=document.getElementById('dc-work-drawer'); d.classList.remove('active'); d.setAttribute('aria-hidden','true');
+  }
+}
+
+/* React grid (drawer only) */
+(function(){
+  const e=React.createElement;
+  function Grid(){
+    const [items]=React.useState(window.DC_PROJECTS||[]);
+    return e('div',{className:'dc-grid'},
+      items.map((p,i)=> {
+        var classes = 'dc-card' + (p.isNew ? ' dc-card--new' : '') + (p.isFlagship ? ' dc-card--flagship' : '');
+        return e('a',{href:p.link, className:classes, key:i, target:'_blank', rel:'noopener noreferrer'},
+          e('img',{src:p.thumb, alt:p.title, onError: function(ev){ ev.target.style.display='none'; }}),
+          e('div',{className:'dc-card-title'}, p.isFlagship ? '★ ' + p.title : p.title)
+        );
+      })
+    );
+  }
+  window.renderDrawerProjects=function(){
+    const root=document.getElementById('dc-projects-drawer');
+    if(root && !root.hasChildNodes()){ ReactDOM.createRoot(root).render(e(Grid)); }
+  };
+})();
+
+/* boot */
+document.getElementById('dc-year').textContent = new Date().getFullYear();
+renderWallets();
+
+/* tip modal */
+document.getElementById('dc-tip-open')?.addEventListener('click', (e)=> {
+  e.preventDefault();
+  const m=document.getElementById('dc-tip-modal'); m.classList.add('active'); m.setAttribute('aria-hidden','false');
+});
+document.getElementById('dc-tip-open-2')?.addEventListener('click', ()=> {
+  const m=document.getElementById('dc-tip-modal'); m.classList.add('active'); m.setAttribute('aria-hidden','false');
+});
+document.querySelectorAll('#dc-tip-modal [data-close]').forEach(el=> el.addEventListener('click', (e)=> {
+  if(!e || e.target.hasAttribute('data-close') || e.target.classList.contains('dc-x')){
+    const m=document.getElementById('dc-tip-modal'); m.classList.remove('active'); m.setAttribute('aria-hidden','true');
+  }
+}));
+document.getElementById('dc-tip-modal').addEventListener('click', (e)=> {
+  if(e.target.hasAttribute('data-close')){ const m=document.getElementById('dc-tip-modal'); m.classList.remove('active'); m.setAttribute('aria-hidden','true'); }
+});
+
+/* drawer triggers */
+document.getElementById('dc-work-open')?.addEventListener('click', (e)=> { e.preventDefault(); dcOpenDrawer(); });
+document.getElementById('dc-work-open-nav')?.addEventListener('click', (e)=> { e.preventDefault(); dcOpenDrawer(); });
+document.getElementById('dc-work-drawer').addEventListener('click', dcCloseDrawer);
+
+/* venda smooth scroll */
+document.getElementById('dc-venda-scroll')?.addEventListener('click', (e)=>{ e.preventDefault(); document.getElementById('venda')?.scrollIntoView({behavior:'smooth'}); });
+</script>
+<!-- ============== /Defi Crawler — Archaic Portfolio ============== -->
