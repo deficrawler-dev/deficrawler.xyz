@@ -338,11 +338,24 @@
   #dc-root .dc-footer{ text-align:center; margin-top:26px; font-size:14px; color:#6b5a43; }
   #dc-root .dc-rule{ height:1px; background: repeating-linear-gradient(90deg, #bfa676 0 8px, transparent 8px 12px); margin:10px 0 8px; }
 
-  /* Responsive */
+  /* ========== MOBILE ========== */
   @media (max-width:640px){
+    #dc-root .dc-paper{ margin:16px 8px; padding:24px 16px 28px; }
+    #dc-root .dc-title{ font-size:clamp(36px,10vw,52px); }
+    #dc-root .dc-h2{ font-size:clamp(24px,6vw,32px); }
+    #dc-root .dc-lede{ font-size:17px; }
+    #dc-root .dc-list li{ font-size:16px; margin:7px 0; }
+    #dc-root .dc-nav{ gap:6px 10px; font-size:15px; }
+    #dc-root .dc-section{ margin:28px 0; }
     #dc-root .dc-venda-card{ grid-template-columns:1fr; }
-    #dc-root .dc-row{ grid-template-columns:110px 1fr auto; }
+    #dc-root .dc-venda-lede{ font-size:16px; }
+    #dc-root .dc-venda-list li{ font-size:15px; }
+    #dc-root .dc-venda-cta{ width:100%; text-align:center; display:block; }
+    #dc-root .dc-row{ grid-template-columns:1fr; gap:6px; }
+    #dc-root .dc-copy{ width:100%; }
     #dc-root .dc-card img{ height:160px; }
+    #dc-root .dc-modal-card{ margin:4vh 8px; padding:16px 12px; }
+    #dc-root .dc-cta{ display:block; text-align:center; padding:13px 16px; font-size:16px; }
   }
 </style>
 
@@ -374,7 +387,7 @@ window.DC_PROJECTS = [
   { title: "Venda App",         thumb: GITHUB_RAW + "Vendaapp.PNG",        link: "https://usevenda.app/",    isNew: true, isFlagship: true },
   { title: "BagsLife",          thumb: GITHUB_RAW + "bagslife.PNG",        link: "https://bagslife.fun/",    isNew: true },
   { title: "Mystic Income",     thumb: GITHUB_RAW + "mysticweb.PNG",       link: "https://mystincome.fun/",  isNew: true },
-  { title: "All In Blank",      thumb: GITHUB_RAW + "allin2.PNG",          link: "https://allinblnk.xyz/",   isNew: true },
+  { title: "All In Blank",      thumb: GITHUB_RAW + "Allin1.PNG",          link: "https://allinblnk.xyz/",   isNew: true },
   { title: "PempSol",           thumb: GITHUB_RAW + "pempsol.PNG",         link: "https://pempsol.fun/",     isNew: true },
   { title: "RastaLand",         thumb: GITHUB_RAW + "Rastaweb.PNG",        link: "https://rastaland.tv/",    isNew: true },
   { title: "WinForever",        thumb: GITHUB_RAW + "winforeverweb.PNG",   link: "https://winforever.fun/",  isNew: true },
